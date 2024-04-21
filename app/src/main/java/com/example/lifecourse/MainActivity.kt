@@ -17,11 +17,17 @@ class MainActivity : AppCompatActivity() {
         binding.menuBtn.setOnClickListener {
             binding.clMenu.isVisible = true
             binding.menuBtn.isVisible = false
+            binding.btnPredp.isVisible = false
+            binding.btnStud.isVisible = false
+            binding.btnVUS.isVisible = false
         }
 
         binding.btnBack.setOnClickListener{
             binding.clMenu.isVisible = false
             binding.menuBtn.isVisible = true
+            binding.btnPredp.isVisible = true
+            binding.btnStud.isVisible = true
+            binding.btnVUS.isVisible = true
         }
 
         binding.tvSignIn.setOnClickListener {

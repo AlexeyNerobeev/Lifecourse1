@@ -6,4 +6,6 @@
     <color name="MenuColor">#687A78</color>
     <color name="SecondaryColor">#A8B2BF</color>
     <color name="textColor">#717343</color>
+    <color name="starColor">#04D94F</color>
+    <color name="textColorProfile">#717343</color>
 </resources>

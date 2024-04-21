@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="PrimaryColor">#F2F2F2</color>
     <color name="MenuColor">#687A78</color>
+    <color name="SecondaryColor">#A8B2BF</color>
+    <color name="textColor">#717343</color>
 </resources>

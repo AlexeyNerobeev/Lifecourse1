@@ -16,11 +16,13 @@ class SignIn : AppCompatActivity() {
         binding.menuBtn.setOnClickListener {
             binding.clMenu.isVisible = true
             binding.menuBtn.isVisible = false
+            binding.btnSignIn.isVisible = false
         }
 
         binding.btnBack.setOnClickListener{
             binding.clMenu.isVisible = false
             binding.menuBtn.isVisible = true
+            binding.btnSignIn.isVisible = true
         }
 
         binding.tvMenu.setOnClickListener {
@@ -36,6 +38,11 @@ class SignIn : AppCompatActivity() {
         binding.tvProfile.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
+        }
+
+        binding.btnSignIn.setOnClickListener {
+            binding.edMail.text = null
+            binding.edPassword.text = null
         }
     }
 }

@@ -9,15 +9,72 @@
     tools:context=".SignIn">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Это вход"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/reg_shape"
+        android:padding="10dp"
+        android:layout_marginTop="70dp"
+        android:text="Вход"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="300dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/reg_fon"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <EditText
+            android:id="@+id/edMail"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/reg_lin_layout"
+            android:hint="Почта"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/black" />
+
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/reg_lin_layout"
+            android:hint="Пароль"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/black" />
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/reg_shape"
+        android:text="Войти"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:background="@color/MenuColor"
@@ -28,8 +85,8 @@
         <ImageView
             android:layout_width="130dp"
             android:layout_height="30dp"
-            android:src="@drawable/logo"
             android:layout_marginStart="5dp"
+            android:src="@drawable/logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,8 +95,8 @@
             android:id="@+id/menuBtn"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/menu_btn"
             android:layout_marginEnd="10dp"
+            android:background="@drawable/menu_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,7 +105,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clMenu"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/MenuColor"
         android:visibility="gone"
@@ -58,11 +115,11 @@
 
         <android.widget.Button
             android:id="@+id/btnBack"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:background="@drawable/ic_back_btn"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,8 +127,8 @@
             android:id="@+id/tvTape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
             android:clickable="true"
             android:text="Лента"
             android:textColor="@color/white"

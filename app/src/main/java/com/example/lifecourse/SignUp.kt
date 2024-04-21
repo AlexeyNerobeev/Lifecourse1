@@ -16,11 +16,13 @@ class SignUp : AppCompatActivity() {
         binding.menuBtn.setOnClickListener {
             binding.clMenu.isVisible = true
             binding.menuBtn.isVisible = false
+            binding.btnSend.isVisible = false
         }
 
         binding.btnBack.setOnClickListener{
             binding.clMenu.isVisible = false
             binding.menuBtn.isVisible = true
+            binding.btnSend.isVisible = true
         }
 
         binding.tvSignIn.setOnClickListener {
@@ -36,6 +38,16 @@ class SignUp : AppCompatActivity() {
         binding.tvProfile.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
+        }
+
+        binding.btnSend.setOnClickListener {
+            binding.edFac.text = null
+            binding.edKaf.text = null
+            binding.edGroup.text = null
+            binding.edName.text = null
+            binding.edSurname.text = null
+            binding.edPassword.text = null
+            binding.edMail.text = null
         }
     }
 }

@@ -1,0 +1,3 @@
+Для того, чтоб развернуть проект для телефона на ОС Android "Lifecourse" нужно:
+- Скачать Android Studio
+- Клонировать проект из GitHub: https://github.com/AlexeyNerobeev/Lifecourse_android

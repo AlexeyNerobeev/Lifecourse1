@@ -44,5 +44,20 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
+
+        binding.btnVUS.setOnClickListener {
+            val intent = Intent(this, RegForVUS::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnStud.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPredp.setOnClickListener {
+            val intent = Intent(this, RegForPredpr::class.java)
+            startActivity(intent)
+        }
     }
 }

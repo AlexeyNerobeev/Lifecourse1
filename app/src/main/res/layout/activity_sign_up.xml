@@ -12,10 +12,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/reg_shape"
         android:padding="10dp"
-        android:text="Регистрация"
+        android:text="Регистрация студента"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="300dp"
         android:layout_height="260dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/reg_fon"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/textView"
@@ -44,7 +44,8 @@
             android:background="@drawable/reg_lin_layout"
             android:hint="Факультет"
             android:paddingStart="20dp"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/edKaf"
@@ -55,7 +56,8 @@
             android:background="@drawable/reg_lin_layout"
             android:hint="Кафедра"
             android:paddingStart="20dp"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/edGroup"
@@ -66,7 +68,8 @@
             android:background="@drawable/reg_lin_layout"
             android:hint="Группа"
             android:paddingStart="20dp"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/edName"
@@ -77,7 +80,8 @@
             android:background="@drawable/reg_lin_layout"
             android:hint="Имя"
             android:paddingStart="20dp"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/edSurname"
@@ -88,7 +92,8 @@
             android:background="@drawable/reg_lin_layout"
             android:hint="Фамилия"
             android:paddingStart="20dp"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
@@ -96,7 +101,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="300dp"
         android:layout_height="110dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/reg_fon"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -112,7 +117,8 @@
             android:background="@drawable/reg_lin_layout"
             android:hint="Почта"
             android:paddingStart="20dp"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/edPassword"
@@ -123,7 +129,8 @@
             android:background="@drawable/reg_lin_layout"
             android:hint="Пароль"
             android:paddingStart="20dp"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
@@ -131,7 +138,7 @@
         android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/reg_shape"
         android:padding="10dp"
         android:text="Отправить"
@@ -141,6 +148,41 @@
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/tvReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Уже зарегистрированы?"
+        android:textColor="@color/link"
+        app:layout_constraintEnd_toEndOf="@+id/btnSend"
+        app:layout_constraintStart_toStartOf="@+id/btnSend"
+        app:layout_constraintTop_toBottomOf="@+id/btnSend" />
+
+    <TextView
+        android:id="@+id/tvRegVUS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Регистрация ВУЗа"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/link"
+        app:layout_constraintEnd_toEndOf="@+id/tvReg"
+        app:layout_constraintStart_toStartOf="@+id/tvReg"
+        app:layout_constraintTop_toBottomOf="@+id/tvReg" />
+
+    <TextView
+        android:id="@+id/tvRegPredpr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Регистрация предприятия"
+        android:clickable="true"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/link"
+        app:layout_constraintEnd_toEndOf="@+id/tvRegVUS"
+        app:layout_constraintStart_toStartOf="@+id/tvRegVUS"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegVUS" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

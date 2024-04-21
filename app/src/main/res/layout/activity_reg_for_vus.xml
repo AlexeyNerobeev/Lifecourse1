@@ -6,40 +6,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/PrimaryColor"
-    tools:context=".SignIn">
+    tools:context=".RegForVUS">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:background="@drawable/reg_shape"
         android:padding="10dp"
-        android:layout_marginTop="70dp"
-        android:text="Вход"
-        android:gravity="center"
+        android:text="Регистрация ВУЗа"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout"
         android:layout_width="300dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/reg_fon"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <EditText
+            android:id="@+id/edVUSName"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/reg_lin_layout"
+            android:hint="Название"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edAdress"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/reg_lin_layout"
+            android:hint="Адрес"
+            android:paddingStart="20dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/reg_shape"
+        android:padding="10dp"
+        android:text="Представитель ВУЗа"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/reg_fon"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <EditText
             android:id="@+id/edMail"
             android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/reg_lin_layout"
             android:hint="Почта"
             android:paddingStart="20dp"
@@ -49,7 +102,7 @@
         <EditText
             android:id="@+id/edPassword"
             android:layout_width="250dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/reg_lin_layout"
@@ -61,22 +114,34 @@
     </LinearLayout>
 
     <android.widget.Button
-        android:id="@+id/btnSignIn"
-        android:layout_width="200dp"
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/reg_shape"
-        android:text="Войти"
-        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="Отправить"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+    <TextView
+        android:id="@+id/tvReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уже зарегистрированы?"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/link"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="@+id/btnSend"
+        app:layout_constraintStart_toStartOf="@+id/btnSend"
+        app:layout_constraintTop_toBottomOf="@+id/btnSend" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:background="@color/MenuColor"
@@ -104,6 +169,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clMenu"

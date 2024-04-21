@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Lifecourse"
         tools:targetApi="31">
         <activity
+            android:name=".SignInForPredpr"
+            android:exported="false" />
+        <activity
+            android:name=".RegForPredpr"
+            android:exported="false" />
+        <activity
+            android:name=".SignInForVUS"
+            android:exported="false" />
+        <activity
+            android:name=".RegForVUS"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
